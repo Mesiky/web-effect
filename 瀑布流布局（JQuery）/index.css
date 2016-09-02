@@ -1,0 +1,22 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+#main{
+	position: relative;
+}
+#main .big_box{
+	padding: 10px 0 0 10px;
+	float: left;
+}
+#main .box{
+	width: 150px;
+	padding: 10px;
+	border:1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0 0  3px;
+
+}
+#main .box img{
+	width: 150px;
+}
