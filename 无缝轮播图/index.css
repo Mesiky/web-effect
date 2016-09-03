@@ -1,0 +1,51 @@
+body,ul,li{
+	margin:0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+#box{
+	width: 490px;
+	height: 170px;
+	margin: 50px auto;
+	position: relative;
+	overflow: hidden;
+}
+#box .img{
+	width: 3430px;
+	height: 170px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2
+}
+#box .img li{
+	float: left;
+}
+
+#box .btn .btn1{
+	width: 30px;
+	height: 52px;
+	display: block;
+	position: absolute;
+	background: url(image/banner_btn.png) no-repeat;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	z-index: 3
+}
+#box .btn .btn_l{
+	background-position: left top;
+	left: 20px;
+}
+#box .btn .btn_r{
+	background-position: right top;
+	right: 20px;
+}
+#box .btn .btn_l:hover{
+	background-position: left bottom;
+}
+#box .btn .btn_r:hover{
+	background-position: right bottom;
+}
