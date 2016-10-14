@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<body>
+	<form action="">
+		<a id="file_btn" href="javascript:void(0)"><p><span class="icon"></span><strong> 添加图片</strong></p></a>
+		<div id="filename"></div>
+	</form>
+	<script type="text/javascript">
+		$(function(){
+			$('#file_btn').click(function(){
+				var file=$('<input type="file" name="myfile[]" />');//创建一个文件节点
+				file.hide();//将这个文件节点隐藏
+				$('#filename').append(file);//将文件节点创建到filename节点下
+				file.trigger("click");
+				file.change(function(){//文件文本修改后触发事件
+				$val=$(this).val();//获取文件节点的value值
+				console.log($val);
+				var file_item=$('<div class="item"><div class="left"></div><div class="right"><a  class="del" href="javascript:void(0)" title="删除"></a></div></div>');
+				file_item.find('.left').html($val);
+				$('#filename').append(file_item);
+				});
+			});
+			$('body').on('click','#filename .item a',function(){
+				$(this).parents('.item').prev('input').remove();
+				$(this).parents('.item').remove();
+			})
+			$('#file_btn').hover(function(){
+				$('#file_btn').find('span').css('backgroundPosition','right top');//删除节点
+			},function(){
+				$('#file_btn').find('span').css('backgroundPosition','left top');
+			})
+
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+	body,p{
+			padding: 0;
+			margin:0;
+		}
+	#file_btn{
+		display: block;
+		width: 120px;
+		height: 60px;
+		background: #F3F3F3;
+		position: relative;
+		border:1px solid #EBEBEB;
+	}
+	.icon{
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		background: url(../images/icon.png) no-repeat left top;
+		vertical-align: middle;
+	}
+	strong{
+		font-weight: normal;
+		vertical-align: top;
+		color: #999999;
+	}	
+	p{
+		position: absolute;
+		left:10%;
+		top:50%;
+		transform: translateY(-50%);
+
+	}
+	.left,.right{
+		width: auto;
+		display: inline-block;
+	}
+
+	#filename .item{
+		width: auto;
+		height: auto;
+		padding: 10px 20px;
+		background: #eee;
+		text-align: center;
+		position: relative;
+		display: inline-block;
+	}
+	#filename .item a{
+		width: 14px;
+		height: 14px;
+		background: url(../images/close.png) no-repeat;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		border: #f0f0f0;
+	}
